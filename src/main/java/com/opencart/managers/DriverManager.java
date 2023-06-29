@@ -17,7 +17,7 @@ public class DriverManager {
             case "CHROME":
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("incognito");
-                //options.addArguments("headless");
+                options.addArguments("headless");
                 driver = new ChromeDriver(options);
                 System.out.println("Chrome driver was initialized");
                 break;

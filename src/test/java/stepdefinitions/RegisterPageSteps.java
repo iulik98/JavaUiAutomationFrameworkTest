@@ -23,12 +23,12 @@ public class RegisterPageSteps {
 
     @And("the privacy checkbox is enabled")
     public void thePrivacyCheckboxIsEnabled() {
-        registerPage.switchOnThePrivacyCheckBox();
+        registerPage.switchOnThePrivacyCheckBox(driver);
     }
 
     @And("continueButton is clicked")
     public void continueButtonIsClicked() throws InterruptedException {
-        registerPage.clickOnContinueButton();
+        registerPage.clickOnContinueButton(driver);
         Thread.sleep(500);
     }
 
