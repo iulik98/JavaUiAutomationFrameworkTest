@@ -23,7 +23,7 @@ Feature: Register Flow Feature Test Suite
     And the privacy checkbox is enabled
     Then the current URL contains the following keyword: "register"
 
-  @Regression
+  @Regression @run
   Scenario Outline: Error messages are displayed when trying to register with invalid <attribute> data
     And the registration form is completed with the following data:
       | firstName | <firstName> |
