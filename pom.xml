@@ -18,6 +18,8 @@
         <junit.version>4.13.2</junit.version>
         <junit.jupiter.version>5.9.2</junit.jupiter.version>
         <cucumber.version>7.12.0</cucumber.version>
+        <junit.vintage.version>5.9.3</junit.vintage.version>
+        <ashot.version>1.5.4</ashot.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -105,9 +107,17 @@
         <dependency>
             <groupId>org.junit.vintage</groupId>
             <artifactId>junit-vintage-engine</artifactId>
-            <version>5.9.3</version>
+            <version>${junit.vintage.version}</version>
             <scope>test</scope>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/ru.yandex.qatools.ashot/ashot -->
+        <dependency>
+            <groupId>ru.yandex.qatools.ashot</groupId>
+            <artifactId>ashot</artifactId>
+            <version>${ashot.version}</version>
+        </dependency>
+
 
     </dependencies>
     <build>

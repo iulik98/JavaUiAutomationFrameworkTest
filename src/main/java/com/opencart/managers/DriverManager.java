@@ -19,6 +19,7 @@ public class DriverManager {
                 options.addArguments("incognito");
                 options.addArguments("headless");
                 driver = new ChromeDriver(options);
+                driver.manage().window().maximize();
                 System.out.println("Chrome driver was initialized");
                 break;
             case "FIREFOX":
