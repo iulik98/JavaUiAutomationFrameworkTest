@@ -70,3 +70,4 @@ public class DriverManager {
         logger.info("The browser is closed and session is set to null");
     }
 }
+//done
