@@ -1,4 +1,5 @@
 package stepdefinitions;
+
 import com.opencart.managers.DriverManager;
 import com.opencart.managers.FakeDataManager;
 import com.opencart.pageobjects.RegisterPage;
@@ -11,7 +12,6 @@ import java.util.Map;
 public class RegisterPageSteps {
     WebDriver driver = DriverManager.getInstance().getDriver();
     RegisterPage registerPage = new RegisterPage(driver);
-
     @When("the registration form is completed with valid random data")
     public void theRegistrationFormIsCompletedWithValidRandomData() {
         String firstName = FakeDataManager.getRandomName();
@@ -19,17 +19,6 @@ public class RegisterPageSteps {
         String email = FakeDataManager.getRandomEmail();
         String password = FakeDataManager.getRandomPassword(4, 20);
         registerPage.fillInTheRegisterForm(firstName, lastName, email, password);
-    }
-
-    @And("the privacy checkbox is enabled")
-    public void thePrivacyCheckboxIsEnabled() {
-        registerPage.switchOnThePrivacyCheckBox(driver);
-    }
-
-    @And("continueButton is clicked")
-    public void continueButtonIsClicked() throws InterruptedException {
-        registerPage.clickOnContinueButton(driver);
-        Thread.sleep(500);
     }
 
     @And("the registration form is completed with the following data:")
