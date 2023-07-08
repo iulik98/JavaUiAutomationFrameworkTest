@@ -16,8 +16,8 @@ public class DriverManager {
     private static final Logger logger = LogManager.getLogger(DriverManager.class);
     private static final String webDriverType = ConfigReaderManager.getProperty("browserType");
     private static DriverManager instance;
-    private WebDriver driver;
     private final String optionsChrome = ConfigReaderManager.getProperty("options");
+    private WebDriver driver;
 
     private DriverManager() {
         switch (webDriverType.toUpperCase()) {
@@ -69,6 +69,4 @@ public class DriverManager {
         instance = null;
         logger.info("The browser is closed and session is set to null");
     }
-
-
 }
